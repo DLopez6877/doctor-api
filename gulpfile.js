@@ -14,7 +14,7 @@ var sourcemaps = require('gulp-sourcemaps');
 
 
 gulp.task('jsBrowserify', ['concatInterface'], function() {
-  return browserify({ entries: ['./js/pokedex-interface.js'] })
+  return browserify({ entries: ['./tmp/allConcat.js'] })
     .bundle()
     .pipe(source('app.js'))
     .pipe(gulp.dest('./build/js'));
