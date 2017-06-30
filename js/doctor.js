@@ -6,33 +6,32 @@ Search = function() {
 };
 
 Search.prototype.getLocation = function(city, state) {
-  // $.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + city + state + '&key=' + apiKey).then(function(response) {
-  //   var lat = object.results[0].geometry.location.lat;
-  //   var lon = object.results[0].geometry.location.lng;
-  //   console.log(city, state, lat, lon);
-  //   Search.getDoctors(lat, lon);
-  //   console.log(response);
-  // }).fail(function(error) {
-  //   console.log(error);
-  // });
-
+  var search = this;
   $.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + city + state + '&key=' + apiKeyGoogle).then(function(response) {
-    console.log(response);
     var lat = response.results[0].geometry.location.lat;
     var lon = response.results[0].geometry.location.lng;
-    console.log(city, state, lat, lon);
+    search.round(lat, lon);
   }).fail(function(error) {
-    console.log(error);
+    console.log("google fail");
   });
-}
+};
 
-Search.prototype.getDoctors = function() {
-  $.get('https://api.betterdoctor.com/2016-03-01/doctors?location=37.773%2C-122.413%2C100&user_location=37.773%2C-122.413&skip=0&limit=20&user_key=' + apiKey)
+Search.prototype.round = function(lat, lon) {
+  var search = this;
+  var roundedLat = Math.ceil(lat * 1000) / 1000;
+  var roundedLon = Math.ceil(lon * 1000) / 1000;
+  console.log(roundedLat);
+  console.log(roundedLon);
+};
+
+Search.prototype.getDoctors = function(lat, lon) {
+
+  $.get('https://api.betterdoctor.com/2016-03-01/doctors?location=' + lat + '%' + lon + '%2C100&sort=distance-asc&skip=0&limit=20&user_key=' + apiKey)
    .then(function(result) {
       console.log(result);
     })
    .fail(function(error){
-      console.log("fail");
+      console.log("doctor fail");
     });
 };
 
