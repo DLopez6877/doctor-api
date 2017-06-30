@@ -1,5 +1,4 @@
 var apiKey = require('./../.env').apiKey;
-var apiKeyGoogle = require('./../.env').apiKeyGoogle;
 
 Search = function() {
 
@@ -7,7 +6,7 @@ Search = function() {
 
 Search.prototype.getLocation = function(city, state) {
   var search = this;
-  $.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + city + state + '&key=' + apiKeyGoogle).then(function(response) {
+  $.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + city + state).then(function(response) {
     var lat = response.results[0].geometry.location.lat;
     var lon = response.results[0].geometry.location.lng;
     search.round(lat, lon);

@@ -6,16 +6,11 @@
   align-items: center;
   justify-content: center;
   .overlay-container {
-    max-width: 580px;
-    padding: 10px;
+    max-width: 560px;
+    padding: 20px;
     background-color: white;
   }
-}
-
-#search-location {
-  display: flex;
-  flex-direction: column;
-  label, button {
-    margin-top: 10px;
+  #location-container {
+    display: none;
   }
 }

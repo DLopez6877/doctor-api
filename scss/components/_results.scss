@@ -1,0 +1,20 @@
+#results {
+  display: flex;
+  * {
+    flex: 1;
+  }
+}
+
+#feature-container {
+  position: relative;
+  .feature {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+  }
+  #feature-setter {
+    position: relative;
+    background-color: red;
+  }
+}
