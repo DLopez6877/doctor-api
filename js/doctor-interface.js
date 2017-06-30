@@ -4,27 +4,22 @@ var displayResults = function(result) {
   console.log('test');
   $('#doctors').empty();
   $('#appended-features').empty();
-  result.data.forEach(function (i) {
-    $('#doctors').append('<li> Dr. ' + i.profile.first_name + " " + i.profile.last_name + " " + i.profile.title);
-    $('#appended-features').append('<li>hey</li>'
-
+  result.data.forEach(function (i, counter) {
+    $('#doctors').append('<li>' +
+                          i.profile.first_name + " " + i.profile.last_name + " " + i.profile.title + '</li>');
+    $('#appended-features').append('<div class="feature">' +
+                                    '<h1>' + i.profile.first_name + " " + i.profile.last_name + " " + i.profile.title + '</h1>' +
+                                    '<p id="description">' + i.profile.bio + '</p>' +
+                                    '<p>icon* ' + i.practices[0].visit_address.street + " " + i.practices[0].visit_address.street2 + ", " + i.practices[0].visit_address.city + ", " + i.practices[0].visit_address.state + ", " + i.practices[0].visit_address.zip + '</p>' +
+                                    '<p>icon*' + i.practices[0].phones[0].number + '</p>' + '<p>icon* ' + i.profile.gender + '</p>' +
+                                    '<p class="lead">Specialties:</p>' + '<ul class="specs specs' + counter + '">' + '</ul>' + '</div>'
     );
+    console.log(i);
+    i.specialties.forEach(function(specialty) {
+      $('.specs').last().append('<li>' + specialty.name + '</li>');
+    });
   });
 }
-
-// <div class="feature">
-//   <h1>[doctor name]</h1>
-//   <p id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-//   <p>icon* [Street] [Street2], [City], [State], [Zip]</p>
-//   <p>icon* [hours]</p>
-//   <p>icon* [phone]</p>
-//   <p>icon* [gender]</p>
-//   <p class="lead">Specialties:</p>
-//   <ul>
-//     <li>[specialty]</li>
-//     <li>[specialty]</li>
-//   </ul>
-// </div>
 
 $(document).ready(function() {
 
