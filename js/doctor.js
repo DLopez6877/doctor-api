@@ -20,19 +20,17 @@ Search.prototype.round = function(lat, lon) {
   var search = this;
   var roundedLat = Math.ceil(lat * 1000) / 1000;
   var roundedLon = Math.ceil(lon * 1000) / 1000;
-  console.log(roundedLat);
-  console.log(roundedLon);
+  search.getDoctors(roundedLat, roundedLon);
 };
 
-Search.prototype.getDoctors = function(lat, lon) {
-
-  $.get('https://api.betterdoctor.com/2016-03-01/doctors?location=' + lat + '%' + lon + '%2C100&sort=distance-asc&skip=0&limit=20&user_key=' + apiKey)
-   .then(function(result) {
-      console.log(result);
-    })
-   .fail(function(error){
-      console.log("doctor fail");
-    });
+Search.prototype.getDoctors = function(roundedLat, roundedLon) {
+  $.get('https://api.betterdoctor.com/2016-03-01/doctors?location=' + roundedLat + '%2C' + roundedLon + '%2C100&sort=distance-asc&skip=0&limit=20&user_key=' + apiKey)
+  .then(function(result) {
+    console.log(result);
+  })
+  .fail(function(error){
+    console.log("doctor fail");
+  });
 };
 
 exports.searchModule = Search;
