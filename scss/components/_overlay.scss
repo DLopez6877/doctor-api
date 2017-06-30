@@ -9,6 +9,8 @@
     max-width: 560px;
     padding: 20px;
     background-color: white;
+    max-height: 90vh;
+    overflow-y: scroll;
   }
   #location-container {
     display: none;
