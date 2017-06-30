@@ -1,0 +1,21 @@
+.overlay {
+  background-color: fade-out($color1, .2);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .overlay-container {
+    max-width: 580px;
+    padding: 10px;
+    background-color: white;
+  }
+}
+
+#search-location {
+  display: flex;
+  flex-direction: column;
+  label, button {
+    margin-top: 10px;
+  }
+}
