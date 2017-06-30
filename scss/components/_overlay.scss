@@ -5,14 +5,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
   .overlay-container {
     max-width: 560px;
     padding: 20px;
     background-color: white;
+    display: none;
+  }
+  #results-container {
     max-height: 90vh;
     overflow-y: scroll;
-  }
-  #location-container {
-    // display: none;
   }
 }
