@@ -1,7 +1,36 @@
 #search-location {
   display: flex;
   flex-direction: column;
-  label, button {
+  label {
     margin-top: 10px;
+  }
+  input {
+    margin-top: 8px;
+    line-height: 18px;
+    padding: 2px;
+    border: 1px solid black;
+  }
+  p {
+    margin: 0;
+    text-align: center;
+  }
+  .lead {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .required {
+    font-size: 16px;
+    color: red;
+  }
+  button {
+    margin-top: 20px;
+    background-color: $color1;
+    color: white;
+    padding: 4px 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: none;
+
   }
 }

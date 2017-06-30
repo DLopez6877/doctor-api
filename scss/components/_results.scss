@@ -1,5 +1,7 @@
 #results {
   display: flex;
+  align-items: center;
+  justify-content: center;
   * {
     flex: 1;
   }
@@ -7,18 +9,16 @@
 
 #feature-container {
   position: relative;
-  #feature-setter {
-    position: relative;
-    background-color: red;
-    visibility: hidden;
-    display: block !important;
-  }
   .feature {
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: 0%;
     left: 0;
     background-color: white;
     padding-left: 5px;
     display: none;
+    max-height: 80vh;
+    h1 {
+      text-align: center;
+    }
   }
 }
