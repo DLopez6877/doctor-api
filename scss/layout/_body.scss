@@ -6,3 +6,9 @@ body {
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 18px;
 }
+
+@media (min-aspect-ratio: 9/6) {
+  body{
+    background-position: top;
+  }
+}
