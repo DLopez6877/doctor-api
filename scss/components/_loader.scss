@@ -12,17 +12,18 @@
     top: 50%;
     transform: translate(-50%, -50%);
     font-size: 18px;
+    color: white;
   }
   &
   .loader {
     width: 120px;
     height: 120px;
-    background-color: white;
+    background-color: transparent;
     border-radius: 50%;
     margin-top: 30px;
     margin-bottom: 30px;
     border: 3px solid;
-    border-color: darken($color1, 10%) white;
+    border-color: darken($color1, 10%) transparent;
     position: relative;
     animation: spin 3s linear infinite;
     &::before, &::after {
