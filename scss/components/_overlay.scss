@@ -9,7 +9,7 @@
   .overlay-container {
     border: 5px solid darken($color1, 10%);
     max-width: 560px;
-    padding: 0 20px;
+    padding: 0 30px;
     background-color: white;
     display: none;
     max-height: calc(90vh - 40px);
@@ -31,6 +31,7 @@
       border: 5px solid darken($color1, 10%);
       font-family: monospace;
       font-weight: 800;
+      z-index: 1;
       &:hover {
         background-color: white;
         color: darken($color1, 10%);
