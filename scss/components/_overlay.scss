@@ -64,6 +64,10 @@
   }
 }
 
+.list-container h3::after {
+  content: ":";
+}
+
 #feature-container {
   position: relative;
   .feature {
@@ -80,11 +84,63 @@
 }
 
 @media (max-width: 500px) {
-  h1 {
-    font-size: 1.3em;
-  }
-  #doctors {
-    padding-left: 0px;
-    list-style: none;
+  #results {
+    flex-direction: column;
+    justify-content: flex-start;
+    .list-container {
+      text-align: center;
+      position: fixed;
+      top: -15px;
+      overflow: scroll;
+      &:hover {
+        z-index: 1;
+        background-color: white;
+        width: 101vw;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 5px solid darken($color1, 10%);
+        h3 {
+          color: black;
+          transition: all .4s ease-in-out;
+          width: 50%;
+          margin-left: 25%;
+          &::before {
+            content: "Scroll to see more "
+          }
+        }
+        #doctors {
+          display: flex;
+          opacity: 1;
+          transition: all 1s ease-in-out .4s;
+        }
+      }
+      #doctors {
+        max-height: 20vh;
+        text-align: left;
+        list-style: none;
+        opacity: 0;
+        flex-wrap: wrap;
+        padding: 0 10px;
+        li {
+         padding: 5px;
+         min-width: 40%;
+        }
+      }
+      h3 {
+        font-size: 25px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: white;
+        &::before {
+          content: "See More ";
+        }
+        &::after {
+          content: "";
+        }
+      }
+    }
+    .list-container, #feature-container {
+      max-height: none;
+    }
   }
 }
