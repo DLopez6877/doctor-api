@@ -33,3 +33,24 @@
     }
   }
 }
+
+@media (max-width: 1230px) {
+  .main-text {
+    top: 70%;
+  }
+}
+
+@media (max-width: 670px) {
+  .main-text {
+    h2 {
+      font-size: 3em;
+    }
+    #cta {
+      width: 100%;
+      background-color: white;
+      &:hover {
+        background-color: fade-out(lighten($color1, 50%), .5); 
+      }
+    }
+  }
+}
