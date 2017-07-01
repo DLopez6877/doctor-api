@@ -7,13 +7,25 @@
   justify-content: center;
   display: none;
   .overlay-container {
+    border: 5px solid darken($color1, 10%);
     max-width: 560px;
-    padding: 20px;
+    padding: 0 20px;
     background-color: white;
     display: none;
+    max-height: calc(90vh - 40px);
+    overflow-y: auto;
+    margin: 0 20px;
   }
-  #results-container {
-    max-height: 90vh;
-    overflow-y: scroll;
+}
+
+#results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  * {
+    flex: 1;
+  }
+  .list-container, #feature-container {
+    max-height: calc(90vh - 40px);
   }
 }
