@@ -14,7 +14,29 @@
     display: none;
     max-height: calc(90vh - 40px);
     overflow-y: auto;
+    overflow-x: hidden;
     margin: 0 20px;
+    position: relative;
+    .cta-close {
+      position: absolute;
+      color: white;
+      background-color: fade-out($color1, .2);
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: -5px;
+      right: -5px;
+      border: 5px solid darken($color1, 10%);
+      font-family: monospace;
+      font-weight: 800;
+      &:hover {
+        background-color: white;
+        color: darken($color1, 10%);
+        cursor: pointer;
+      }
+    }
   }
 }
 

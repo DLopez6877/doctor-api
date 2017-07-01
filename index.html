@@ -15,6 +15,7 @@
     </div>
     <div class="overlay">
       <div class="overlay-container" id="location-container">
+        <div class="cta-close">X</div>
         <form id="search-location">
           <p class="lead">Search by Location:</p>
           <p class="required">items with * are required</p>
@@ -26,12 +27,13 @@
           <input type="text" id="city" required>
           <label for="state">State: <span class="required">*</span></label>
           <input type="text" id="state" required>
-          <label for="zip">Zip Code: <span class="required">*</span></label>
-          <input type="number" id="zip" required>
+          <label for="zip">Zip Code:</label>
+          <input type="number" id="zip">
           <button type="submit" id="submit-location">Find doctors</button>
         </form>
       </div><!-- overlay-container -->
       <div class="overlay-container" id="results-container">
+        <div class="cta-close">X</div>
         <div id="results">
           <div class="list-container">
             <h3>Doctors:</h3>
