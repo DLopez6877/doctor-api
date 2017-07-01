@@ -4,6 +4,7 @@
   overflow: hidden;
   margin: 0;
   border: none;
+  background-color: transparent;
   &::after {
     content: "loading";
     position: absolute;
