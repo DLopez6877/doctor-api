@@ -27,5 +27,8 @@
     background-color: fade-out(lighten($color1, 50%), .5);
     border: 4px double $color1;
     font-size: 2em;
+    &:hover {
+      background-color: white;
+    }
   }
 }
