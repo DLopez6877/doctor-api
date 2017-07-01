@@ -36,7 +36,8 @@
 
 @media (max-width: 1230px) {
   .main-text {
-    top: 70%;
+    top: auto;
+    bottom: 20px;
   }
 }
 
@@ -49,7 +50,7 @@
       width: 100%;
       background-color: white;
       &:hover {
-        background-color: fade-out(lighten($color1, 50%), .5); 
+        background-color: fade-out(lighten($color1, 50%), .5);
       }
     }
   }
