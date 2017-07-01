@@ -1,0 +1,57 @@
+#loading-screen {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  border: none;
+  &::after {
+    content: "loading";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+  }
+  &
+  .loader {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 3px solid;
+    border-color: darken($color1, 10%) white;
+    position: relative;
+    animation: spin 3s linear infinite;
+    &::before, &::after {
+      content: "";
+      border: 3px solid;
+      border-radius: 50%;
+      border-color: darken($color1, 10%) transparent;
+      background-color: transparent;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      height: 85px;
+      width: 85px;
+      animation: spin 2s linear infinite;
+    }
+    &::after {
+      width: 65px;
+      height: 65px;
+      top: 25px;
+      left: 25px;
+      animation: spin 1s linear infinite;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

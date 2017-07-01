@@ -6,6 +6,9 @@
   align-items: center;
   justify-content: center;
   display: none;
+  #location-container {
+    z-index: 1;
+  }
   .overlay-container {
     border: 5px solid darken($color1, 10%);
     max-width: 560px;

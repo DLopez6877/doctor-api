@@ -38,7 +38,9 @@ $(document).ready(function() {
     var newSearch = new Search();
     newSearch.getLocation(city, state, displayResults);
     $('#location-container').css('display', 'none');
-    $('#results-container').css('display', 'flex');
+    setTimeout(function() {
+      $('#results-container').css('display', 'flex');
+    }, 4000);
   });
 
 });
