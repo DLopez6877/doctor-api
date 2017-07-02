@@ -1,7 +1,6 @@
 var Search = require('./../js/doctor.js').searchModule;
 
 var displayResults = function(result) {
-  console.log('test');
   $('#doctors').empty();
   $('#appended-features').empty();
   result.data.forEach(function (i, counter) {
@@ -14,7 +13,6 @@ var displayResults = function(result) {
                                     '<p>icon*' + i.practices[0].phones[0].number + '</p>' + '<p>icon* ' + i.profile.gender + '</p>' +
                                     '<p class="lead">Specialties:</p>' + '<ul class="specs specs' + counter + '">' + '</ul>' + '</div>'
     );
-    console.log(i);
     i.specialties.forEach(function(specialty) {
       $('.specs').last().append('<li>' + specialty.name + '</li>');
     });
@@ -36,7 +34,7 @@ $(document).ready(function() {
     $('#zip').val("");
 
     var newSearch = new Search();
-    newSearch.getLocation(city, state, displayResults);
+    newSearch.findDoctorsByIllness(city, state, displayResults);
     $('#location-container').css('display', 'none');
     setTimeout(function() {
       $('#results-container').css('display', 'flex');
