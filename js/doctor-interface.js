@@ -24,17 +24,17 @@ $(document).ready(function() {
   $('#search-location').submit(function(event) {
     event.preventDefault();
 
+    var symptoms = $('#symptoms').val();
     var city = $('#city').val();
     var state = $('#state').val();
 
-    $('#first-name').val("");
-    $('#last-name').val("");
+    $('#symptoms').val("");
     $('#city').val("");
     $('#state').val("");
     $('#zip').val("");
 
     var newSearch = new Search();
-    newSearch.findDoctorsByIllness(city, state, displayResults);
+    newSearch.findDoctorsBySymptoms(symptoms, city, state, displayResults);
     $('#location-container').css('display', 'none');
     setTimeout(function() {
       $('#results-container').css('display', 'flex');

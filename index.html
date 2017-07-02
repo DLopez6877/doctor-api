@@ -18,12 +18,10 @@
       <div class="overlay-container" id="location-container">
         <div class="cta-close">X</div>
         <form id="search-location">
-          <p class="lead">Search by Location:</p>
+          <p class="lead">Search by Symptoms:</p>
           <p class="required">items with * are required</p>
-          <label for="first-name">First Name:</label>
-          <input type="text" id="first-name">
-          <label for="last-name">Last Name:</label>
-          <input type="text" id="last-name">
+          <label for="symptoms">Symptoms: <span class="required">*</span></label>
+          <input type="text" id="symptoms" placeholder="E.g. Toothache" required>
           <label for="city">City: <span class="required">*</span></label>
           <input type="text" id="city" required>
           <label for="state">State: <span class="required">*</span></label>
@@ -36,6 +34,14 @@
       <div class="overlay-container" id="loading-screen">
         <div class="loader">
 
+        </div>
+      </div>
+      <div class="overlay-container" id="doctor-error-screen">
+        <div class="error-message">
+          <div class="cta-close">X</div>
+            <h2>Sorry.  No matches.</h2>
+            <img src="images/doctor-penguin.png" alt="cartoon">
+            <button type="button" class="error-button">TRY ANOTHER SEARCH</button>
         </div>
       </div>
       <div class="overlay-container" id="results-container">
