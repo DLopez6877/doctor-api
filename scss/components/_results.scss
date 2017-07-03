@@ -42,6 +42,22 @@
     &:first-child {
       display: block;
     }
+    img {
+      margin-right: 10px;
+      max-width: 24px;
+    }
+    p:not(#description) {
+      display: flex;
+      align-items: center;
+    }
+    .credit {
+      font-size: 14px;
+      margin: -9px;
+      justify-content: center;
+      font-style: italic;
+      opacity: .7;
+      color: #333;
+    }
   }
 }
 
