@@ -11,8 +11,9 @@ Search.prototype.findDoctorsBySymptoms = function(symptoms, city, state, display
     var lon = response.results[0].geometry.location.lng;
     search.round(symptoms, lat, lon, displayResults);
   }).fail(function(error) {
-    $('#doctors').append('<li>[INVALID ADDRESS]</li>');
-    console.log('location-error');
+    setTimeout(function() {
+      $('#location-error-screen').css('display', 'flex');
+    }, 2000);
   });
 };
 
@@ -24,18 +25,14 @@ Search.prototype.round = function(symptoms, lat, lon, displayResults) {
 };
 
 Search.prototype.getDoctors = function(symptoms, roundedLat, roundedLon, displayResults) {
-  console.log(symptoms);
-  console.log(symptoms + " " + roundedLat + " " + roundedLon);
   $.get('https://api.betterdoctor.com/2016-03-01/doctors?query=' + symptoms + '&location=' + roundedLat + '%2C' + roundedLon + '%2C100&sort=distance-asc&skip=0&limit=20&user_key=' + apiKey)
   .then(function(result) {
     displayResults(result);
-    console.log(result);
   })
   .fail(function(error){
     setTimeout(function() {
       $('#doctor-error-screen').css('display', 'flex');
       $('#results-container').hide();
-      console.log('doctor error');
     }, 2000);
   });
 };

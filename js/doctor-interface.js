@@ -37,7 +37,8 @@ $(document).ready(function() {
     newSearch.findDoctorsBySymptoms(symptoms, city, state, displayResults);
     $('#location-container').css('display', 'none');
     setTimeout(function() {
-      if ( $('#doctors').contents().length === 0 ) {
+      if ($('#location-error-screen').css('display') === 'flex') {
+      } else if ( $('#appended-features').is(':empty')) {
         $('#doctor-error-screen').css('display', 'flex');
       } else {
         $('#results-container').css('display', 'flex');
