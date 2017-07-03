@@ -1,8 +1,8 @@
 <h1 align="center">
   <br>
-  <img src="https://github.com/DLopez6877/doctor-api/blob/master/images/demo.jpg?raw=true alt="Markdownify" width="600">
-  <br>
   Find a Doctor
+  <br>
+  <img src="https://github.com/DLopez6877/doctor-api/blob/master/images/demo.jpg?raw=true alt="Markdownify" width="700">
   <br>
 </h1>
 
