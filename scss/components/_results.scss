@@ -60,8 +60,9 @@
   opacity: .7;
   color: #333;
   position: absolute;
-  bottom: -10px;
+  top: 2px;
   right: 5px;
+  margin: 0;
 }
 @media (max-width: 500px) {
   #results {
