@@ -20,7 +20,7 @@ To clone and run this application, you'll need [Node.js](https://nodejs.org/en/d
 $ git clone https://github.com/DLopez6877/doctor-api
 
 # Go into the repository
-$ cd doctor-find
+$ cd doctor-api
 
 # Install dependencies
 $ npm install
@@ -35,7 +35,7 @@ $ touch .env
 # Make apiKey variable
 exports.apiKey = "your api key goes here";
 
-# Build the folders the app
+# Build the app folders
 $ gulp build
 
 # Run the app
