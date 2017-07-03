@@ -17,7 +17,7 @@ var displayResults = function(result) {
       $('.specs').last().append('<li>' + specialty.name + '</li>');
     });
   });
-}
+};
 
 $(document).ready(function() {
 

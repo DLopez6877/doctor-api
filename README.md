@@ -26,6 +26,15 @@ $ cd doctor-find
 $ npm install
 $ bower install
 
+# Get an API Key
+Visit https://developer.betterdoctor.com/ and register to get an API Key
+
+# Create a .env folder in uppermost directory
+$ touch .env
+
+# Make apiKey variable
+exports.apiKey = "your api key goes here";
+
 # Build the folders the app
 $ gulp build
 
