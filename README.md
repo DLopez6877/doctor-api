@@ -45,6 +45,6 @@ For feedback or support contact Daniel Lopez at DLopez6877@gmail.com.
 
 ### License
 
-ISC
-
-Copyright (c) 2017 Daniel Lopez
+**find a doctor** © 2017, Daniel Lopez. Released under the [MIT License].
+> CodePen[@dlopez6877.com](https://codepen.io/DLopez6877/) &nbsp;&middot;&nbsp;
+> GitHub [@dlopez6877](https://github.com/dlopez6877) &nbsp;&middot;&nbsp;
