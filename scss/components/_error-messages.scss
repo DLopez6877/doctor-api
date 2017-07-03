@@ -1,8 +1,13 @@
-.error-message {
-  display: flex;
+#doctor-error-screen {
+  display: none;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   img {
     width: 200px;
+  }
+  h2 {
+    margin: 0;
+    padding: 0;
   }
 }

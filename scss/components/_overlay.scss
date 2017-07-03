@@ -48,11 +48,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
   * {
     flex: 1;
   }
   .list-container, #feature-container {
     max-height: calc(90vh - 40px);
+  }
+}
+
+.list-container h3 {
+  padding-left: 5px;
+  &::after {
+    content: ":";
   }
 }
 
@@ -67,9 +75,6 @@
   }
 }
 
-.list-container h3::after {
-  content: ":";
-}
 
 #feature-container {
   position: relative;

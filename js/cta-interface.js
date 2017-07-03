@@ -10,6 +10,11 @@ $(document).ready(function() {
   $('.cta-close').click(function() {
     $('.main-text').show();
     $('.overlay').hide();
-    $('#results-container').hide();
+    $(this).parent().hide();
+  });
+
+  $('.error-button').click(function() {
+    $('#location-container').css('display', 'flex');
+    $(this).parent().hide();
   });
 });

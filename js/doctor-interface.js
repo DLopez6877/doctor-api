@@ -37,8 +37,12 @@ $(document).ready(function() {
     newSearch.findDoctorsBySymptoms(symptoms, city, state, displayResults);
     $('#location-container').css('display', 'none');
     setTimeout(function() {
-      $('#results-container').css('display', 'flex');
-    }, 4000);
+      if ( $('#doctors').contents().length === 0 ) {
+        $('#doctor-error-screen').css('display', 'flex');
+      } else {
+        $('#results-container').css('display', 'flex');
+      }
+    }, 5000);
   });
 
 });
