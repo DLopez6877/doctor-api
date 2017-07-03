@@ -1,51 +1,50 @@
-## Planning
-* clone framework with working sass auto-update
-* npm install
-* bower install
-* gulp build
-* gulp serve
-* sign-up for api key
-* create .env folder and export api-key
-* run test api call to console log return during document load
-* style page with background
-* create form with inputs for user name, city, and state
-* use google maps api to convert city and state to latitude and longitude
-* return list of 20 doctor names that can be clicked to reveal description, city, state, street, street 2, zip, office hours, phone number, gender, specialties name
-* style page with large text, and cta for form
-* style form in overlay
-* style response and error screen
-* add optional search by doctor name and medical issue
-* add error screen and response screen to second form
-* add loader screen between form submission and results
-* add drop down list of specialites and search by specialties optional
-* refactor readme
-* research predictive text
-* if possible add predictive text to medical issue.
-* make readme awesome
+<h1 align="center">
+  <br>
+  <img src="https://github.com/DLopez6877/doctor-api/blob/master/images/demo.jpg?raw=true alt="Markdownify" width="600">
+  <br>
+  Find a Doctor
+  <br>
+</h1>
 
-<!--
-1. Configuration/dependencies
-  * This should include ALL dependencies.
-  * It should also include WHERE they are defined and used in the project
-  * It could include a short description of what each does for you
+## Key Features
+* Search for doctors by location and symptoms
+* Receive up to 20 doctors that match your search
+* Mobile friendly
 
-2. Specs
-  * Spec 1: Description, input, output.
-  * Spec 2: Description, input, output.
+## Setup and Install
 
-3. Integration
-  * Initial routes or index pages with all dependencies in Controller/index.html head
-  * Template/html page for ...
-  * Template/html page for ...
-  * Template/html page for ... (one for each route/integrated user story)
-  * Display...
-  * Integrate feature that...
+To clone and run this application, you'll need [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer and [Bower](https://bower.io/). From your command line:
 
-4. UX/UI
-  * Include and modify bootstrap/materialize/Sass etc.
-  * Develop custom style
+```bash
+# Clone this repository
+$ git clone https://github.com/DLopez6877/doctor-api
 
-5. Polish
-  * Refactor minor portion of...
-  * Delete unused...
-  * Make README awesome -->
+# Go into the repository
+$ cd doctor-find
+
+# Install dependencies
+$ npm install
+$ bower install
+
+# Build the folders the app
+$ gulp build
+
+# Run the app
+$ gulp serve
+```
+
+## Technologies Used
+- [jQuery - AJAX](http://www.w3schools.com/jquery/jquery_ref_ajax.asp) - jQuery simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.
+- [Node.js - NPM](https://www.w3schools.com/nodejs/nodejs_npm.asp) - NPM is the package manager for JavaScript and the world’s largest software registry. Discover packages of reusable code — and assemble them in powerful new ways.
+- [Bower](https://bower.io/) - Bower can manage components that contain HTML, CSS, JavaScript, fonts or even image files.
+- [Gulp](http://gulpjs.com/) - Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow.
+- [Sass](http://sass-lang.com/) - Sass (Syntactically Awesome StyleSheets) is an extension of CSS. Sass allows you to use things like variables, nested rules, inline imports and more. It also helps to keep things organized and allows you to create stylesheets faster.
+
+## Support and contact details
+For feedback or support contact Daniel Lopez at DLopez6877@gmail.com.
+
+### License
+
+ISC
+
+Copyright (c) 2017 Daniel Lopez
