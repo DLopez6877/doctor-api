@@ -1,4 +1,4 @@
-var apiKey = require('./../../.env').apiKey;
+var apiKey = require('./../.env').apiKey;
 
 Search = function() {
 
