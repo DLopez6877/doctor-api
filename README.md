@@ -17,8 +17,7 @@ To clone and run this application, you'll need [Node.js](https://nodejs.org/en/d
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/DLopez6877/doctor-api
-
+$ git clone [https://github.com/DLopez6877/doctor-api](https://github.com/DLopez6877/doctor-api)
 # Go into the repository
 $ cd doctor-api
 
@@ -27,7 +26,7 @@ $ npm install
 $ bower install
 
 # Get an API Key
-Visit https://developer.betterdoctor.com/ and register to get an API Key
+Visit [https://developer.betterdoctor.com/](https://developer.betterdoctor.com/) and register to get an API Key
 
 # Create a .env folder in uppermost directory
 $ touch .env
