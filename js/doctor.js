@@ -1,5 +1,3 @@
-var apiKey = require('./../.env').apiKey;
-
 Search = function() {
 
 };
@@ -25,7 +23,7 @@ Search.prototype.round = function(symptoms, lat, lon, displayResults) {
 };
 
 Search.prototype.getDoctors = function(symptoms, roundedLat, roundedLon, displayResults) {
-  $.get('https://api.betterdoctor.com/2016-03-01/doctors?query=' + symptoms + '&location=' + roundedLat + '%2C' + roundedLon + '%2C100&sort=distance-asc&skip=0&limit=20&user_key=' + apiKey)
+  $.get('https://api.betterdoctor.com/2016-03-01/doctors?query=' + symptoms + '&location=' + roundedLat + '%2C' + roundedLon + '%2C100&sort=distance-asc&skip=0&limit=20&user_key=0ebe35eafe81bc938b29bf95f43c1e62')
   .then(function(result) {
     displayResults(result);
   })
